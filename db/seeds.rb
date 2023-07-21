@@ -8,3 +8,4 @@
 
 10.times do |i|
     Post.create(author: "Autor: #{i}", content: "Contenido: #{i}", date: "#{rand(1..30)}/#{rand(1..12)}/2023", image: "https://i.pravatar.cc/300")
+end

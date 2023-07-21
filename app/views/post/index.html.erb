@@ -1,3 +1,17 @@
 <h1>Post#index</h1>
 <h1>Formulario de registro de Post</h1>
 <p>Find me in app/views/post/index.html.erb</p>
+
+<%= form_with url: 'crearpost', method: :post, model: @post do |f| %>
+    <% f.label :author, "Autor:" %>
+    <%= f.text_field :author, name: "post[author]" %><br >
+    <% f.label :date, "date:" %>
+    <%= f.text_field :date, name: "post[date]" %><br >
+    <% f.label :content, "content:" %>
+    <%= f.text_field :content, name: "post[content]" %><br >
+    <% f.label :image, "images:" %>
+    <%= f.text_field :image, name: "post[image]" %><br >
+
+    <%= f.submit %>
+
+<% end %>
