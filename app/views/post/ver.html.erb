@@ -1,3 +1,15 @@
 <h1>Post#ver</h1>
 <h1>Ver todos los Posts registrados</h1>
 <p>Find me in app/views/post/ver.html.erb</p>
+
+
+<% Post.all.each do |i| %>
+    post (id): <%= i.id %><br >
+    post (author): <%= i.author %><br >
+    post (content): <%= i.content %><br >
+    <%= image_tag i.image %>
+    <hr>
+<% end %>
+<br >
+<br >
+<%= link_to "volver a crear Post", post_index_path %><br >
