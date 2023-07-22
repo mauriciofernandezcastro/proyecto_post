@@ -2,16 +2,16 @@
 <h1>Formulario de registro de Post</h1>
 <p>Find me in app/views/post/index.html.erb</p>
 
-<%= form_with url: 'crearpost', method: :post, model: @post do |f| %>
-    <% f.label :author, "Autor:" %>
+<%= form_with model: @post, url: post_create_path, method: :post do |f| %>
+    <%= f.label :author, "Autor:" %><br >
     <%= f.text_field :author, name: "post[author]" %><br >
-    <% f.label :date, "date:" %>
+    <%= f.label :date, "Fecha:" %><br >
     <%= f.text_field :date, name: "post[date]" %><br >
-    <% f.label :content, "content:" %>
+    <%= f.label :content, "Contenido:" %><br >
     <%= f.text_field :content, name: "post[content]" %><br >
-    <% f.label :image, "images:" %>
+    <%= f.label :image, "Imágenes:" %><br >
     <%= f.text_field :image, name: "post[image]" %><br >
-
+<br >
     <%= f.submit %>
 
 <% end %>
